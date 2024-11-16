@@ -1,0 +1,9 @@
+@use '@/scss/root' as *;
+
+.main {
+  background-color: $page;
+
+  @media (min-width: 1440px) {
+    margin-left: 305px;
+  }
+}

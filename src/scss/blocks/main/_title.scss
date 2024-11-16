@@ -1,0 +1,16 @@
+@use '@/scss/root' as *;
+
+.title {
+  background-image: linear-gradient(90deg, $page, $light);
+  box-shadow: inset 0 1px $aqua-ultra-light;
+
+  &__content {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $gray;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,55 @@
+@use '@/scss/root' as *;
+
+//page
+@use '@/scss/blocks/page/page';
+@use '@/scss/blocks/page/container';
+@use '@/scss/blocks/page/btn';
+@use '@/scss/blocks/page/modal';
+@use '@/scss/blocks/page/form';
+
+//header
+@use '@/scss/blocks/header/header';
+
+//main
+@use '@/scss/blocks/main/main';
+@use '@/scss/blocks/main/title';
+@use '@/scss/blocks/main/hero';
+@use '@/scss/blocks/main/brands';
+@use '@/scss/blocks/main/electronics';
+@use '@/scss/blocks/main/prices';
+
+//footer
+@use '@/scss/blocks/footer/footer';
+
+//menu
+@use '@/scss/blocks/menu/menu';
+
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+}
+::before {
+  box-sizing: inherit;
+}
+::after {
+  box-sizing: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}

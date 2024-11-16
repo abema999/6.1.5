@@ -1,0 +1,43 @@
+@use '@/scss/root' as *;
+
+.nav {
+  &__list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: auto;
+    scrollbar-width: none;
+
+    @media (min-width: 1440px) {
+      flex-wrap: wrap;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $gray;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 6px;
+
+    &--active {
+      background-color: $light;
+      border: 2px solid $aqua-light;
+      border-radius: 6px;
+    }
+  }
+}

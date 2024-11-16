@@ -1,0 +1,41 @@
+@use '@/scss/root' as *;
+
+.modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  display: none;
+  width: 320px;
+  height: 100%;
+  padding: 24px 16px;
+  flex-direction: column;
+  background-color: $light;
+  box-shadow: -16px 0 52px 0 $shadow;
+
+  @media (min-width: 1440px) {
+    width: 440px;
+    padding: 40px 32px;
+    box-shadow: inset 1px 0 $aqua-ultra-light, -16px 0 52px 0 $shadow;
+  }
+
+  &__btn {
+    &--close {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 40px;
+
+      @media (min-width: 1440px) {
+        position: relative;
+        top: -8px;
+        left: -105px;
+      }
+    }
+  }
+
+  &__form {
+    @media (min-width: 1440px) {
+      margin-top: -80px;
+    }
+  }
+}

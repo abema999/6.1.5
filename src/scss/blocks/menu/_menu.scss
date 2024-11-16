@@ -1,0 +1,98 @@
+@use '@/scss/root' as *;
+@use '@/scss/blocks/menu/menu-nav';
+@use '@/scss/blocks/menu/lang';
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  width: 320px;
+  height: 100%;
+  padding: 18px 16px 32px 16px;
+  background-color: $light;
+  box-shadow: 16px 0 52px 0 $shadow;
+
+  @media (min-width: 768px) {
+    padding: 18px 24px 32px 24px;
+  }
+
+  @media (min-width: 1440px) {
+    z-index: 0;
+    display: flex;
+    width: 305px;
+    padding-top: 30px;
+    box-shadow: none;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 0;
+
+    @media (min-width: 768px) {
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: 1440px) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__btn {
+    margin-right: 16px;
+
+    &--close {
+      @media (min-width: 1440px) {
+        display: none;
+      }
+    }
+
+    &--search {
+      margin-right: 0;
+    }
+  }
+
+  &__logo {
+    margin-right: auto;
+  }
+
+  &__nav {
+    margin-bottom: auto;
+  }
+
+  &__actions {
+    margin-bottom: 16px;
+    font-size: 0;
+  }
+
+  &__contacts {
+    margin-bottom: 8px;
+  }
+
+  &__email {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  &__tel {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  &__lang {
+    font-size: 0;
+  }
+}
+
+.opened {
+  display: flex;
+}

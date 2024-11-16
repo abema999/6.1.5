@@ -1,0 +1,80 @@
+@use '@/scss/root' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    position: relative;
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -16px;
+      width: 4px;
+      height: 40px;
+      background-color: $aqua;
+      border-radius: 0 4px 4px 0;
+
+      @media (min-width: 1440px) {
+        left: -33px;
+        width: 3px;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    margin-bottom: 16px;
+    padding: 14px 16px;
+    border: 1px solid $gray-ultra-light;
+    border-radius: 8px;
+
+    &::placeholder {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+      color: $gray-light;
+    }
+
+    &--message {
+      height: 118px;
+      resize: none;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: $gray;
+  }
+
+  &__link {
+    color: $pink;
+  }
+
+  &__btn {
+    width: 136px;
+    height: 32px;
+    padding: 4px 40px 4px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    align-self: flex-end;
+    color: $light;
+    background-color: $pink;
+    background-image: url('@/img/goside.svg');
+    background-repeat: no-repeat;
+    background-position: 92% 50%;
+    border-radius: 16px;
+    text-transform: uppercase;
+  }
+}
